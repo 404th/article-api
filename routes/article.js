@@ -14,10 +14,10 @@ router.post(
     [
         check("title", "title should be min 5 chars")
             .isString()
-            .isLength({ min: 5 }),
+            .isLength({ min: 0 }),
         check("body", "body should be min 10 chars")
             .isString()
-            .isLength({ min: 10 }),
+            .isLength({ min: 0 }),
     ],
     article_post_create(validationResult)
 );
